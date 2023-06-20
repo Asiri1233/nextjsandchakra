@@ -1,136 +1,27 @@
+import { calcLength } from "framer-motion";
 import React from "react";
-const image = "https://i.ibb.co/dmR2k9P/signature-zyzz-gif.gif";
+import ImageCard from "./ImageCard";
+
+const images = [
+  "https://i.ibb.co/dmR2k9P/signature-zyzz-gif.gif",
+  "https://i.ibb.co/dmR2k9P/signature-zyzz-gif.gif",
+  "https://i.imgur.com/XSHXBlL.png",
+  "https://i.imgur.io/wwpnTNG_d.webp?maxwidth=640&shape=thumb&fidelity=medium",
+  "https://i.imgur.com/P93Mul6.jpg",
+];
+
 //grid lg:grid-cols-3 lg:grid-rows-3 md:grid-cols-2
 const Card = () => {
   return (
-    
-    <div className="grid  lg:grid-cols-2 xl:grid-cols-3 lg:grid-rows-3 md:grid-cols-2">
-      
-      <div className="mb-5">
-        <div className="card w-96 h-[35rem] glass flex">
-          <figure>
-            <div
-              className="w-[100%] h-[13rem] bg-cover bg-center bg-no-repeat hover:scale-110 duration-300"
-              style={{ backgroundImage: `url(${image})` }}
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Life hack</h2>
-            <div>
-              <p> Gift Cards, Accounts, and Refund Services.</p>
-
-              <p>💸 Everything HQ</p>
-              <p>🚀 Fast Support</p>
-              <p>🌟 Vouched</p>
-              <p>🛍 Rewards & Giveaways</p>
-
-              <p>
-                <strong>💎 Autoshop: Chillbrosmarket.com</strong>
-              </p>
-              <p>✔️ Vouches: t.me/ChillbroIGotVouches</p>
-            </div>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Join now!</button>
-            </div>
+    <>
+      <div className="grid  lg:grid-cols-2 xl:grid-cols-3 lg:grid-rows-2 md:grid-cols-2 z-10">
+        {images.map((image, i) => (
+          <div key={i}>
+            <ImageCard image={image} i={i} />
           </div>
-        </div>
+        ))}
       </div>
-
-      
-
-      <div className="">
-        <div className="card w-96 h-[35rem] glass flex">
-          <figure>
-            <div
-              className="w-[100%] h-[13rem] bg-cover bg-center bg-no-repeat hover:scale-110 duration-300"
-              style={{ backgroundImage: `url(${image})` }}
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Life hack</h2>
-            <div>
-              <p> Gift Cards, Accounts, and Refund Services.</p>
-
-              <p>💸 Everything HQ</p>
-              <p>🚀 Fast Support</p>
-              <p>🌟 Vouched</p>
-              <p>🛍 Rewards & Giveaways</p>
-
-              <p>
-                <strong>💎 Autoshop: Chillbrosmarket.com</strong>
-              </p>
-              <p>✔️ Vouches: t.me/ChillbroIGotVouches</p>
-            </div>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Join now!</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      
-
-      <div className="">
-        <div className="card w-96 h-[35rem] glass flex">
-          <figure>
-            <div
-              className="w-[100%] h-[13rem] bg-cover bg-center bg-no-repeat hover:scale-110 duration-300"
-              style={{ backgroundImage: `url(${image})` }}
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Life hack</h2>
-            <div>
-              <p> Gift Cards, Accounts, and Refund Services.</p>
-
-              <p>💸 Everything HQ</p>
-              <p>🚀 Fast Support</p>
-              <p>🌟 Vouched</p>
-              <p>🛍 Rewards & Giveaways</p>
-
-              <p>
-                <strong>💎 Autoshop: Chillbrosmarket.com</strong>
-              </p>
-              <p>✔️ Vouches: t.me/ChillbroIGotVouches</p>
-            </div>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Join now!</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div className="">
-        <div className="card w-96 h-[35rem] glass flex">
-          <figure>
-            <div
-              className="w-[100%] h-[13rem] bg-cover bg-center bg-no-repeat hover:scale-110 duration-300"
-              style={{ backgroundImage: `url(${image})` }}
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Life hack</h2>
-            <div>
-              <p> Gift Cards, Accounts, and Refund Services.</p>
-
-              <p>💸 Everything HQ</p>
-              <p>🚀 Fast Support</p>
-              <p>🌟 Vouched</p>
-              <p>🛍 Rewards & Giveaways</p>
-
-              <p>
-                <strong>💎 Autoshop: Chillbrosmarket.com</strong>
-              </p>
-              <p>✔️ Vouches: t.me/ChillbroIGotVouches</p>
-            </div>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Join now!</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 
