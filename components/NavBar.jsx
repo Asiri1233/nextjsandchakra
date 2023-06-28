@@ -10,22 +10,22 @@ function NavBar({background}) {
   };
 
   return (
-    <nav className={`bg-${background}`}>
+    <nav className={`${background}`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center">
           <img
-            src="https://flowbite.com/docs/images/logo.svg"
+            src="https://i.imgur.com/gsetHBj.png"
             className="h-8 mr-3"
             alt="Flowbite Logo"
           />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Pixel Mp
+            Pixel MP
           </span>
         </Link>
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 ml-3 text-sm  rounded-lg md:hidden  focus:outline-none focus:ring-2 duration-200 "
           aria-controls="navbar-default"
           aria-expanded={isMobileMenuOpen ? 'true' : 'false'}
           onClick={handleMobileMenuToggle}
@@ -60,29 +60,29 @@ function NavBar({background}) {
               </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent hover:scale-105 duration-300"
-              >
-                Telegram
-              </a>
-            </li>
-            <li>
               <Link
                 href="/buy"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent hover:scale-105 duration-300"
+                className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 dark:text-white hover:text-blue-500 hover:scale-105 duration-300"
               >
                 Redeem/Buy
               </Link>
             </li>
             
             <li>
-              <Link
-                href="/pricing"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent hover:scale-105 duration-300"
+              <a
+                href="https://t.me/+9Z92reCYmx5hODBl" target="_blank"
+                className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 dark:text-white hover:text-blue-500 hover:scale-105 duration-300"
+              >
+                Telegram
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://t.me/WRestocker " target='_blank'
+                className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 dark:text-white hover:text-blue-500 hover:scale-105 duration-300"
               >
                 Contact
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

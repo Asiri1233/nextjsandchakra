@@ -5,7 +5,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="w-[100%] md:h-[100vh]  bg-[#021625]">
+    <div className="w-[100%] md:h-[100vh] background">
     <div className="relative">
       <NavBar background="[#021625]" />
     </div>

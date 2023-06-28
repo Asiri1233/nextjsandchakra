@@ -2,7 +2,9 @@ import React from 'react'
 
 const loading = () => {
   return (
-    <div>loading</div>
+    <div className='w-[100%] h-[100vh] bg-black'>
+    <p>Coming Soon</p>
+    loading</div>
   )
 }
 

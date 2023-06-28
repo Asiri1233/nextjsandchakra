@@ -1,25 +1,55 @@
-import { calcLength } from "framer-motion";
-import React from "react";
+"use client"
+import React, { useState, useEffect } from "react";
 import ImageCard from "./ImageCard";
+import axios from "axios";
 
-const images = [
-  "https://i.ibb.co/dmR2k9P/signature-zyzz-gif.gif",
-  "https://i.ibb.co/dmR2k9P/signature-zyzz-gif.gif",
-  "https://i.imgur.com/XSHXBlL.png",
-  "https://i.imgur.io/wwpnTNG_d.webp?maxwidth=640&shape=thumb&fidelity=medium",
-  "https://i.imgur.com/P93Mul6.jpg",
-];
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 
-//grid lg:grid-cols-3 lg:grid-rows-3 md:grid-cols-2
 const Card = () => {
+  const [card, setCard] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://shivering-line-production.up.railway.app/posts")
+      .then((res) => {
+        const shuffledCard = shuffleArray(res.data);
+        setCard(shuffledCard);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <>
-      <div className="grid  lg:grid-cols-2 xl:grid-cols-3 lg:grid-rows-2 md:grid-cols-2 z-10">
-        {images.map((image, i) => (
-          <div key={i}>
-            <ImageCard image={image} i={i} />
-          </div>
-        ))}
+      <div className="grid  lg:grid-cols-2 xl:grid-cols-3 lg:grid-rows- md:grid-cols-2 z-10">
+        {card.map(
+          ({
+            shopBanner,
+            shopProfileImg,
+            shopName,
+            shopDesc,
+            shopLink,
+            createdAt,
+            _id,
+          }) => (
+            <div key={_id}>
+              <ImageCard
+                _id={_id}
+                image={shopBanner}
+                shopProfileImg={shopProfileImg}
+                shopName={shopName}
+                shopDesc={shopDesc}
+                shopLink={shopLink}
+                createdAt={createdAt}
+              />
+            </div>
+          )
+        )}
       </div>
     </>
   );

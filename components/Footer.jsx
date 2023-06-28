@@ -10,19 +10,19 @@ const Footer = () => {
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
               <Link href="/" className="flex items-center">
-                  <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="FlowBite Logo" />
-                  <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Pixel Mp</span>
+                  <img src="https://i.imgur.com/gsetHBj.png" className="h-8 mr-3" alt="FlowBite Logo" />
+                  <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Pixel MP</span>
               </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
                   <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact Us</h2>
                   <ul className="text-gray-600 dark:text-gray-400 font-medium">
-                      <li className="mb-4">
-                          <Link href="/" className="hover:underline">Discord</Link>
-                      </li>
                       <li>
-                          <Link href="/" className="hover:underline">Telegram</Link>
+                          <a href="https://t.me/+9Z92reCYmx5hODBl" target='_blank' className="hover:underline">Telegram</a>
+                      </li>
+                      <li className='mt-4'>
+                          <a href="https://t.me/WRestocker" target='_blank' className="hover:underline mt-4">Want website?</a>
                       </li>
                   </ul>
               </div>
@@ -42,9 +42,6 @@ const Footer = () => {
                   <ul className="text-gray-600 dark:text-gray-400 font-medium">
                       <li className="mb-4">
                           <a href="#" className="hover:underline">Statics</a>
-                      </li>
-                      <li>
-                          <a href="#" className="hover:underline">Vouches</a>
                       </li>
                   </ul>
               </div>

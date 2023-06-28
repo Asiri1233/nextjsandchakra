@@ -2,17 +2,14 @@
 import { Box, Heading, Text } from '@chakra-ui/react';
 import { CheckCircleIcon } from '@chakra-ui/icons';
 import NavBar from '@/components/NavBar';
-NavBar
 
-import Confetti from 'react-confetti';
 import Link from 'next/link';
 
 
 export default function Success() {
   return (
     <>
-    <Confetti onDurationChange={10} />
-    <div className="w-[100%] md:h-[100vh]  bg-[#021625]">
+    <div className="w-[100%] md:h-[100vh]  background">
     <div className="relative">
       <NavBar background="[#021625]" />
     </div>
@@ -33,6 +30,7 @@ export default function Success() {
       <Link href="/" className='w-[9rem] flex items-center justify-center h-[3rem] bg-red text-white border border-white rounded-lg ml-[] hover:bg-blue-100 hover:text-black duration-200'>Go back to Home</Link>
     </div>
     </div>
+
     </>
   );
 }
